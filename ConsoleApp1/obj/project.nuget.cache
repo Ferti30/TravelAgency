@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "99PcIFXfNez8WH3NKSIvj0K4iN+8I8cRM+WIRVKkXOA4kyixprCwFYh8cYbvpzKgLENhYKZDAYPrijPE11IUEA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Paweł\\source\\repos\\ConsoleApp1\\ConsoleApp1\\TravelAgency.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Paweł\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
