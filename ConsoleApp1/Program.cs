@@ -25,7 +25,7 @@ foreach (Trip trip in selectedTrips)
 {
     Console.WriteLine("NUMER: " + (selectedTrips.IndexOf(trip) + 1));
     Console.WriteLine("KRAJ: " + trip.Country);
-    Console.WriteLine("TERMIN: " + departureDate.ToShortDateString() + " - " + departureDate.AddDays(numbers.ElementAt(selectedTrips.IndexOf(trip))).ToShortDateString() + " (" + numbers.ElementAt(selectedTrips.IndexOf(trip)) + ")");
+    Console.WriteLine("TERMIN: " + departureDate.ToShortDateString() + " - " + departureDate.AddDays(numbers.ElementAt(selectedTrips.IndexOf(trip))).ToShortDateString() + " (" + numbers.ElementAt(selectedTrips.IndexOf(trip)) + " dni)");
     Console.WriteLine("HOTEL: " + trip.Hotel_Name + " (" + trip.Category + ")");
     Console.WriteLine("WYŻYWIENIE: " + trip.Food);
     Console.WriteLine("CENA: " + calculator.CalculateTotalPrice(trip, numbers.ElementAt(selectedTrips.IndexOf(trip)), 1, 0) + " PLN/os");
