@@ -2,6 +2,7 @@
 
 var agency = new Agency();
 var random = new Random();
+TotalPrice calculator = new TotalPrice();
 var distinctCountriess = agency.Trips.Select(t => t.Country).Distinct().ToList();
 var distinctCategories = agency.Trips.Select(t => t.Category).Distinct().ToList();
 int allInclusiveCount = 0;
@@ -27,7 +28,7 @@ foreach (Trip trip in selectedTrips)
     Console.WriteLine("TERMIN: " + departureDate.ToShortDateString() + " - " + departureDate.AddDays(numbers.ElementAt(selectedTrips.IndexOf(trip))).ToShortDateString() + " (" + numbers.ElementAt(selectedTrips.IndexOf(trip)) + ")");
     Console.WriteLine("HOTEL: " + trip.Hotel_Name + " (" + trip.Category + ")");
     Console.WriteLine("WYŻYWIENIE: " + trip.Food);
-    Console.WriteLine("CENA: " + trip.Price);
+    Console.WriteLine("CENA: " + calculator.CalculateTotalPrice(trip, numbers.ElementAt(selectedTrips.IndexOf(trip)), 1, 0) + " PLN/os");
     Console.WriteLine("--------------------------------");
 }
 
@@ -88,7 +89,7 @@ while (true)
 var selectedTrip = agency.Trips.FirstOrDefault(x => x.Id == selectedId);
 
 
-TotalPrice calculator = new TotalPrice();
+
 decimal totalPrice = calculator.CalculateTotalPrice(selectedTrip, selectedLength, adultNumber, childNumber);
 Console.WriteLine("CAŁKOWITA CENA WAKACJI WYNOSI: " + totalPrice + " PLN");
 string end = Console.ReadLine();
